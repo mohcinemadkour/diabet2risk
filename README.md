@@ -9,7 +9,7 @@ I was facing two challenegs with my dataset, the relatively small number of obse
 -   Cost-sensitive learning (penalize algorithms)
 -   SMOTE - Synthetic Minority Over-sampling Technique
 
-My goal is to predict the risk with the highest accuracy possible, for that I train and compare the accuray of the following machine learning models:
+My goal is to predict the risk with the highest accuracy possible with the relatively small data set we have, for that I train and compare the accuray of the following machine learning models:
 - L_1-regularized Logistic Regression
 - L_2-regularized Logistic Regression
 - Support Vector Machine (SVM)
