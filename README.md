@@ -4,21 +4,15 @@ Type 2 diabetes is a chronic condition that affects the way the body metabolizes
 
 ## Challenges
 
-I was facing two challenegs with my dataset:
-- relatively small number of observations
-- imbalanced classes (A1C levels)
-
-To overcome the issues with imbalanced data, I will use several techniques:
-- f1 macro averaged score for performance metric
-- cost-sensitive learning (penalize algorithms)
+I was facing two challenegs with my dataset, the relatively small number of observations, and the imbalanced classes (A1C levels). To overcome the issues with imbalanced data, I use the following techniques:
+- F1 macro averaged score for performance metric
+- Cost-sensitive learning (penalize algorithms)
 - SMOTE - Synthetic Minority Over-sampling Technique
-
-and several machine learning algorithms:
+My goal is to predict the risk with the highest accuracy possible, for that I train and compare the accuray of the following machine learning models:
 - L_1-regularized Logistic Regression
 - L_2-regularized Logistic Regression
 - Support Vector Machine (SVM)
 - Random Forest
 - Gradient Boosting
 - AdaBoost
-
-All together, I have trained 22 models.
+All together, In this project I have trained 22 models.
