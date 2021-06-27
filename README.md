@@ -41,10 +41,9 @@ As a classification problem, you can get the following from the confusion matrix
 ## Insights
 
 My dataset was relatively small and imbalanced and I had to employ several techniques for handling imbalanced classes:
-
-  1- f1 macro averaged score for performance metric
-  2- cost-sensitive learning (penalize algorithms)
-  3- SMOTE - Synthetic Minority Over-sampling Technique
+1- f1 macro averaged score for performance metri
+2- cost-sensitive learning (penalize algorithms)
+3- SMOTE - Synthetic Minority Over-sampling Technique
 
 I have used six machine learning algorithms: $L_1$ and $L_2$ regularized Logistic Regressions, SVM and three tree ensembles, Random Forest, Gradient Boost and AdaBoost.
 
