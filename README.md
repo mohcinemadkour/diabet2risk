@@ -28,4 +28,9 @@ The data consist of 19 variables on 403 subjects from 1046 subjects who were int
 
 **Metabolic syndrome** is a collection of risk factors that includes high blood pressure, high blood sugar, excess body fat around the waist, and abnormal cholesterol levels. The syndrome increases the chance of developing heart disease, stroke, and diabetes. Aside from a large waist circumference, most of the disorders associated with metabolic syndrome have no symptoms. Losing weight, exercise, and dietary changes can help prevent or reverse metabolic syndrome. According to a national health survey, more than 1 in 5 Americans has metabolic syndrome. The number of people with metabolic syndrome increases with age, affecting more than 40% of people in their 60s and 70s.
 
-The 403 subjects were the ones who were actually screened for diabetes. Glycosolated hemoglobin (A1C) > 7.0 is usually taken as a positive diagnosis of diabetes. 
+The 403 subjects were the ones who were actually screened for diabetes. Glycosolated hemoglobin (A1C) > 7.0 is usually taken as a positive diagnosis of diabetes.
+
+## Interpretation of Performance Measures
+
+As a classification problem, you can get the following from the confusion matrix: TR,FN, FP, TN. From these metsures you can calculate Accuracy, Precision, Recall and F1 score:
+  - **Accuracy** - Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations (TP+TN/TP+FP+FN+TN). Accuracy is a great measure but only when you have symmetric datasets where values of false positive and false negatives are almost same. T
