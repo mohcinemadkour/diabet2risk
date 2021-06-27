@@ -42,29 +42,29 @@ As a classification problem, you can get the following from the confusion matrix
 
 My dataset was relatively small and imbalanced and I had to employ several techniques for handling imbalanced classes:
 
-    1- f1 macro averaged score for performance metric
-    2- cost-sensitive learning (penalize algorithms)
-    3- SMOTE - Synthetic Minority Over-sampling Technique
+  1- f1 macro averaged score for performance metric
+  2- cost-sensitive learning (penalize algorithms)
+  3- SMOTE - Synthetic Minority Over-sampling Technique
 
 I have used six machine learning algorithms: $L_1$ and $L_2$ regularized Logistic Regressions, SVM and three tree ensembles, Random Forest, Gradient Boost and AdaBoost.
 
 In total, I have trained 22 models.
 
-    - Plain models, without any of the above listed techniques, did prety bad with predicting minority classes. They mostly predicted the majority class. Because of that, their accuracy score was high, but f1-macro score was low. As expected, tree ensembles models, were performed slightly better.
-    - All three techniques listed above, made a positive difference. Again, tree ensemble models produced better performance.
-    - I could not find one single health condition that could alone increase the risk of being diagnosed with type 2 diabetes.
-    - It looks that they are working differently for different people.
-    - From my limited sample, I could conclude that the most contributing factors were age, cholesterol ratio and waist cirumference.
+  - Plain models, without any of the above listed techniques, did prety bad with predicting minority classes. They mostly predicted the majority class. Because of that, their accuracy score was high, but f1-macro score was low. As expected, tree ensembles models, were performed slightly better.
+  - All three techniques listed above, made a positive difference. Again, tree ensemble models produced better performance.
+  - I could not find one single health condition that could alone increase the risk of being diagnosed with type 2 diabetes.
+  - It looks that they are working differently for different people.
+  - From my limited sample, I could conclude that the most contributing factors were age, cholesterol ratio and waist cirumference.
 
 The Random Forest model with cost-sensitive learning have produced the best performance:
 
-    - prety good on the majority class - recall=0.83
-    - on the diabetes class not so bad - recall=0.58
-    - not so good on the smallest, pre-diabetes, class - recall=0.29
+  - prety good on the majority class - recall=0.83
+  - on the diabetes class not so bad - recall=0.58
+  - not so good on the smallest, pre-diabetes, class - recall=0.29
 
 It is interesting to note the following regarding predicting pre-diabetes:
 
-    - there were only 7 labels in the test set
-    - recall=0.29 means 2 successfully predicted labels and in addition to my winning model, only 3 models had this score: Gradient Boost, Random Forest and SVM all with SMOTE
-    - only 2 models succeded in 3 positive prediction, recall=0.43. Surprisingly, that was $L_2$-regularized Logistic Regression with SMOTE and cost-sensitive learning.
+  - there were only 7 labels in the test set
+  - recall=0.29 means 2 successfully predicted labels and in addition to my winning model, only 3 models had this score: Gradient Boost, Random Forest and SVM all with SMOTE
+  - only 2 models succeded in 3 positive prediction, recall=0.43. Surprisingly, that was $L_2$-regularized Logistic Regression with SMOTE and cost-sensitive learning.
 
