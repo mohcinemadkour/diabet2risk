@@ -17,3 +17,15 @@ My goal is to predict the risk with the highest accuracy possible with the relat
 - Gradient Boosting
 - AdaBoost
 All together, In this project I have trained 22 models.
+
+## Result Reproduction
+
+**Diabetes Dataset**
+
+These data are courtesy of Dr John Schorling, Department of Medicine, University of Virginia School of Medicine which can be obtained from http://biostat.mc.vanderbilt.edu/DataSets.
+
+The data consist of 19 variables on 403 subjects from 1046 subjects who were interviewed in a study to understand the prevalence of obesity, diabetes, and other cardiovascular risk factors in central Virginia for African Americans. According to Dr John Hong, Diabetes Mellitus Type II (adult onset diabetes) is associated most strongly with obesity. The waist/hip ratio may be a predictor in diabetes and heart disease. Type 2 Diabetes is also associated with hypertension - they may both be part of Metabolic Syndrome.
+
+**Metabolic syndrome** is a collection of risk factors that includes high blood pressure, high blood sugar, excess body fat around the waist, and abnormal cholesterol levels. The syndrome increases the chance of developing heart disease, stroke, and diabetes. Aside from a large waist circumference, most of the disorders associated with metabolic syndrome have no symptoms. Losing weight, exercise, and dietary changes can help prevent or reverse metabolic syndrome. According to a national health survey, more than 1 in 5 Americans has metabolic syndrome. The number of people with metabolic syndrome increases with age, affecting more than 40% of people in their 60s and 70s.
+
+The 403 subjects were the ones who were actually screened for diabetes. Glycosolated hemoglobin (A1C) > 7.0 is usually taken as a positive diagnosis of diabetes. 
