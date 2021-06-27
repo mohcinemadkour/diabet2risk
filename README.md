@@ -36,4 +36,35 @@ As a classification problem, you can get the following from the confusion matrix
   - **Accuracy** - Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations (TP+TN/TP+FP+FN+TN). Accuracy is a great measure but only when you have symmetric datasets where values of false positive and false negatives are almost same. 
   - **Precision** - Precision is the ratio of correctly predicted positive observations to the total predicted positive observations (TP/TP+FP). The question that this metric answer is of all patients that labeled as diabetics, how many are actually diabetics? High precision relates to the low false positive rate.
   - **Recall (Sensitivity)** - Recall is the ratio of correctly predicted positive observations to the all observations in actual class - yes (TP/TP+FN). The question recall answers is: Of all the patients that are truly diabetic.
-  - **F1 score** - F1 Score is the weighted average of Precision and Recall. Therefore, this score takes both false positives and false negatives into account. Intuitively it is not as easy to understand as accuracy, but F1 is usually more useful than accuracy, especially if you have an uneven class distribution which is our case. F1 Score works best if false positives and false negatives have similar cost. If the cost of false positives and false negatives are very different, it’s better to look at both Precision and Recall. 
+  - **F1 score** - F1 Score is the weighted average of Precision and Recall (2*(Recall * Precision) / (Recall + Precision)). Therefore, this score takes both false positives and false negatives into account. Intuitively it is not as easy to understand as accuracy, but F1 is usually more useful than accuracy, especially if you have an uneven class distribution which is our case. F1 Score works best if false positives and false negatives have similar cost. If the cost of false positives and false negatives are very different, it’s better to look at both Precision and Recall. 
+
+## Insights
+
+My dataset was relatively small and imbalanced and I had to employ several techniques for handling imbalanced classes:
+
+    1- f1 macro averaged score for performance metric
+    2- cost-sensitive learning (penalize algorithms)
+    3- SMOTE - Synthetic Minority Over-sampling Technique
+
+I have used six machine learning algorithms: $L_1$ and $L_2$ regularized Logistic Regressions, SVM and three tree ensembles, Random Forest, Gradient Boost and AdaBoost.
+
+In total, I have trained 22 models.
+
+    - Plain models, without any of the above listed techniques, did prety bad with predicting minority classes. They mostly predicted the majority class. Because of that, their accuracy score was high, but f1-macro score was low. As expected, tree ensembles models, were performed slightly better.
+    - All three techniques listed above, made a positive difference. Again, tree ensemble models produced better performance.
+    - I could not find one single health condition that could alone increase the risk of being diagnosed with type 2 diabetes.
+    - It looks that they are working differently for different people.
+    - From my limited sample, I could conclude that the most contributing factors were age, cholesterol ratio and waist cirumference.
+
+The Random Forest model with cost-sensitive learning have produced the best performance:
+
+    - prety good on the majority class - recall=0.83
+    - on the diabetes class not so bad - recall=0.58
+    - not so good on the smallest, pre-diabetes, class - recall=0.29
+
+It is interesting to note the following regarding predicting pre-diabetes:
+
+    - there were only 7 labels in the test set
+    - recall=0.29 means 2 successfully predicted labels and in addition to my winning model, only 3 models had this score: Gradient Boost, Random Forest and SVM all with SMOTE
+    - only 2 models succeded in 3 positive prediction, recall=0.43. Surprisingly, that was $L_2$-regularized Logistic Regression with SMOTE and cost-sensitive learning.
+
