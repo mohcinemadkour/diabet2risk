@@ -56,13 +56,13 @@ In total, I have trained 22 models.
   - It looks that they are working differently for different people.
   - From my limited sample, I could conclude that the most contributing factors were age, cholesterol ratio and waist cirumference.
 
-The Random Forest model with cost-sensitive learning have produced the best performance:
+The **Random Forest** model with cost-sensitive learning have produced the best performance:
 
   - prety good on the majority class - recall=0.83
   - on the diabetes class not so bad - recall=0.58
   - not so good on the smallest, pre-diabetes, class - recall=0.29
 
-It is interesting to note the following regarding predicting pre-diabetes:
+It is interesting to note the following regarding **predicting pre-diabetes**:
 
   - there were only 7 labels in the test set
   - recall=0.29 means 2 successfully predicted labels and in addition to my winning model, only 3 models had this score: Gradient Boost, Random Forest and SVM all with SMOTE
