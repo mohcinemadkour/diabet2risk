@@ -32,6 +32,8 @@ The data consist of 19 variables on 403 subjects from 1046 subjects who were int
 
 The 403 subjects were the ones who were actually screened for diabetes. Glycosolated hemoglobin (A1C) > 7.0 is usually taken as a positive diagnosis of diabetes.
 
+**Code and article** can be found on this github repo and on https://mohcinemadkour.github.io/posts/2019/07/Machine%20Learning,%20July%202019,%20Risk%20prediction/
+
 ## Interpretation of Performance Measures
 
 As a classification problem, you can get the following from the confusion matrix: TR,FN, FP, TN. From these measures you can calculate Accuracy, Precision, Recall and F1 score:
