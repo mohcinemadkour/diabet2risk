@@ -32,5 +32,7 @@ The 403 subjects were the ones who were actually screened for diabetes. Glycosol
 
 ## Interpretation of Performance Measures
 
-As a classification problem, you can get the following from the confusion matrix: TR,FN, FP, TN. From these metsures you can calculate Accuracy, Precision, Recall and F1 score:
-  - **Accuracy** - Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations (TP+TN/TP+FP+FN+TN). Accuracy is a great measure but only when you have symmetric datasets where values of false positive and false negatives are almost same. T
+As a classification problem, you can get the following from the confusion matrix: TR,FN, FP, TN. From these measures you can calculate Accuracy, Precision, Recall and F1 score:
+  - **Accuracy** - Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations (TP+TN/TP+FP+FN+TN). Accuracy is a great measure but only when you have symmetric datasets where values of false positive and false negatives are almost same. 
+  - **Precision** - Precision is the ratio of correctly predicted positive observations to the total predicted positive observations (TP/TP+FP). The question that this metric answer is of all patients that labeled as diabetics, how many are actually diabetics? High precision relates to the low false positive rate.
+  - **Recall (Sensitivity)** - Recall is the ratio of correctly predicted positive observations to the all observations in actual class - yes (TP/TP+FN). The question recall answers is: Of all the patients that are truly diabetic
