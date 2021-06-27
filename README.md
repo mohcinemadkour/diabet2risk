@@ -8,10 +8,12 @@ Type 2 diabetes is a chronic condition that affects the way the body metabolizes
 I was facing two challenegs with my dataset:
 - relatively small number of observations
 - imbalanced classes (A1C levels)
+
 To overcome the issues with imbalanced data, I will use several techniques:
 - f1 macro averaged score for performance metric
 - cost-sensitive learning (penalize algorithms)
 - SMOTE - Synthetic Minority Over-sampling Technique
+
 and several machine learning algorithms:
 - L_1-regularized Logistic Regression
 - L_2-regularized Logistic Regression
@@ -19,4 +21,5 @@ and several machine learning algorithms:
 - Random Forest
 - Gradient Boosting
 - AdaBoost
+
 All together, I have trained 22 models.
